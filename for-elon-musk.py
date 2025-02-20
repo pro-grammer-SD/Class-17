@@ -1,7 +1,3 @@
 import csv
 
-with open('datatyping.csv') as d:
-    v = csv.DictReader(f=d, fieldnames="rawWpm")
-    
-for wpm in v:
-    print(wpm)
+print(max(float(row['rawWpm']) for row in csv.DictReader(open('./datatyping.csv', 'r'))))
